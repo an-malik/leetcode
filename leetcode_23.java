@@ -1,5 +1,6 @@
-# Leetcode_23
-# Merge K sorted linked lists
+// Leetcode_23
+// Merge K sorted linked lists
+// Using PriorityQueue to find min of all current ListNode heads
 
 /**
  * Definition for singly-linked list.
@@ -9,6 +10,7 @@
  *     ListNode(int x) { val = x; }
  * }
  */
+
 class Solution {
     public ListNode mergeKLists(ListNode[] lists) {
         

@@ -1,4 +1,8 @@
 // Leetcode_173
+// Binary Search Tree Iterator.
+// Using Stack to traverse left children, parent and then right subtree.
+
+// another way to solve this is using Morris Tree Traversal. IMP
 
 /**
  * Definition for binary tree
