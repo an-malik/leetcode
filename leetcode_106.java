@@ -12,8 +12,9 @@
  */
 class Solution {
     
-    class Index {
+    private class Index {
         int index;
+        Index(int i) {index = i;}
     }
     
     public TreeNode buildTree(int[] in, int[] post) {
@@ -29,13 +30,13 @@ class Solution {
         if(s > e)
             return null;
         
-        int val = post[pIndex--];
+        int val = post[pIndex.index--];
         TreeNode node = new TreeNode(val);
         
         int pivot = search(in, val, s, e);
         
-        node.left = helper(in, post, pivot + 1, e, pIndex);
-        node.right = helper(in, post, s, pivot - 1, pIndex);
+        node.right = helper(in, post, pivot + 1, e, pIndex); // can't flip these two statements
+        node.left = helper(in, post, s, pivot - 1, pIndex); // breaks how pIndex is updated
         
         return node;
     }
